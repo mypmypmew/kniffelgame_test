@@ -1,0 +1,106 @@
+@charset "UTF-8";
+
+@media all {
+
+	html, body {
+		font-family: Verdana, Arial, Helvetica;
+	}
+
+
+	.container {
+		width: 50%;
+		margin: auto;
+		text-align: center;
+	}
+
+
+	.dice {
+		width: 50px;
+		height: 50px;
+		margin: 10px;
+		cursor: pointer;
+		display: inline-block;
+		border: 2px solid black;
+		border-radius: 10px;
+		background: white left top no-repeat;
+		background-size: contain;
+	}
+
+
+	.dice[value="1"] {
+		background-image: url("img/1.png");
+	}
+
+
+	.dice[value="2"] {
+		background-image: url("img/2.png");
+	}
+
+
+	.dice[value="3"] {
+		background-image: url("img/3.png");
+	}
+
+
+	.dice[value="4"] {
+		background-image: url("img/4.png");
+	}
+
+	.dice[value="5"] {
+		background-image: url("img/5.png");
+	}
+
+	.dice[value="6"] {
+		background-image: url("img/6.png");
+	}
+
+
+	.dice[data-hold] {
+		border-color: red;
+		opacity: 0.5;
+	}
+
+	.dice:hover {
+		box-shadow: 0 0 8px black;
+		transform: scale(1.2);
+	}
+
+
+	#roll {
+		cursor: pointer;
+		display: block;
+		padding: 10px;
+		margin: 0 auto;
+
+		/* 4. Zentrieren Sie den "Würfeln" Button. */
+	}
+
+	table {
+		margin-top: 10px;
+		width: 100%;
+		border-collapse: collapse;
+		/*
+		5. Führen Sie die Rahmen der Tabellenzellen
+		und den der Tabelle zusammen
+		(die sichtbaren Abstände zwischen den Zellen verschwinden).
+		*/
+
+	}
+
+	table, th, td {
+		border: 1px solid black;
+	}
+
+	th, td {
+		width: 50%;
+		padding: 10px;
+	}
+
+	td:not(#score):empty {
+		cursor: pointer;
+	}
+
+	td:not(#score):empty:hover {
+		background-color: lightgrey;
+	}
+}

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="de">
+	<head>
+		<title>Kniffel - Praktikantenaufgabe</title>
+
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+		<link rel="stylesheet" type="text/css" href="style.css">
+		<script type="text/javascript" src="script.js" defer></script>
+	</head>
+	<body>
+		<div class="container">
+			<button class="dice" onclick="toggleDice(this)"></button>
+			<button class="dice" onclick="toggleDice(this)"></button>
+			<button class="dice" onclick="toggleDice(this)"></button>
+			<button class="dice" onclick="toggleDice(this)"></button>
+			<button class="dice" onclick="toggleDice(this)"></button>
+
+			<button id="roll" onclick="rollDices()">Würfeln</button>
+
+			<table>
+				<tbody>
+					<tr>
+						<th>Einser</th>
+						<td onclick="assignDices(this, 1)"></td>
+					</tr>
+
+					<tr>
+						<th>Zweier</th>
+						<td onclick="assignDices(this, 2)"></td>
+					</tr>
+					<tr>
+						<th>Dreier</th>
+						<td onclick="assignDices(this, 3)"></td>
+					</tr>
+					<tr>
+						<th>Vierer</th>
+						<td onclick="assignDices(this, 4)"></td>
+					</tr>
+					<tr>
+						<th>Fuenfer</th>
+						<td onclick="assignDices(this, 5)"></td>
+					</tr>
+					<tr>
+						<th>Sechser</th>
+						<td onclick="assignDices(this, 6)"></td>
+					</tr>
+
+					<tr>
+						<th>Dreierpasch</th>
+						<td onclick="assignDices(this, 'Dreierpasch')"></td>
+					</tr>
+					<tr>
+						<th>Viererpasch</th>
+						<td onclick="assignDices(this, 'Viererpasch')"></td>
+					</tr>
+					<tr>
+						<th>Full House</th>
+						<td onclick="assignDices(this, 'Full House')"></td>
+					</tr>
+					<tr>
+						<th>kleine Straße</th>
+						<td onclick="assignDices(this, 'kleine Straße')"></td>
+					</tr>
+					<tr>
+						<th>große Straße</th>
+						<td onclick="assignDices(this, 'große Straße')"></td>
+					</tr>
+					<tr>
+						<th>Kniffel</th>
+						<td onclick="assignDices(this, 'Kniffel')"></td>
+					</tr>
+					<tr>
+						<th>Chance</th>
+						<td onclick="assignDices(this, 'Chance')"></td>
+					</tr>
+					<tr>
+						<th>Bonus</th>
+						<td id="bonus">0</td>
+					</tr>
+
+					<tr>
+						<th>Gesamt</th>
+						<td id="score">0</td>
+					</tr>
+				</tbody>
+			</table>
+		</div>
+	</body>
+</html>
